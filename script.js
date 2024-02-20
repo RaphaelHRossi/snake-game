@@ -15,6 +15,14 @@ let gameInterval;
 let gameSpeedDelay = 200;
 let gameStarted = false;
 
+//BLINK TEXT
+function blinkInstructionText(){
+    instructionText.style.visibility = (instructionText.style.visibility === 'hidden' ? 'visible' : 'hidden');
+}
+
+// text blink every 500 milliseconds
+const blinkInterval = setInterval(blinkInstructionText, 500);
+
 // Draw Game Map, Snake, Food
 function draw(){
     board.innerHTML = '';
