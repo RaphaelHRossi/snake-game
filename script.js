@@ -20,6 +20,12 @@ function blinkInstructionText(){
     instructionText.style.visibility = (instructionText.style.visibility === 'hidden' ? 'visible' : 'hidden');
 }
 
+// Function to make sound when eats an apple
+function playEatSound(){
+    const eatSound = document.getElementById('eatSound');
+    eatSound.play();
+}
+
 // text blink every 500 milliseconds
 const blinkInterval = setInterval(blinkInstructionText, 500);
 
@@ -101,6 +107,8 @@ function move() {
             checkCollision();
             draw();
         }, gameSpeedDelay);
+         //playing sound
+        playEatSound();
     } else {
         snake.pop();
     }
