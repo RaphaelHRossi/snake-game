@@ -22,8 +22,17 @@ function blinkInstructionText(){
 
 // Function to make sound when eats an apple
 function playEatSound(){
-    const eatSound = document.getElementById('eatSound');
-    eatSound.play();
+    const eatSound = document.getElementById('eatSound').play();
+}
+
+// Function to make sound when game over
+function playgameOverSound(){
+    const gameOverSound = document.getElementById('gameOverSound').play();
+}
+
+// Function to make sound when press spacebar to star
+function playstartGameSound(){
+    const startGameSound = document.getElementById('startGameSound').play();
 }
 
 // text blink every 500 milliseconds
@@ -130,6 +139,7 @@ function starGame(){
 function handleKeyPress(event){
     if((!gameStarted && event.code === 'Space') || (!gameStarted && event.key === ' ')){
         starGame();
+        playstartGameSound();
     } else {
         switch (event.key){
             case 'ArrowUp':
@@ -187,6 +197,7 @@ function resetGame(){
     direction = 'right';
     gameSpeedDelay = 200;
     updateScore();
+    playgameOverSound();
 }
 
 function updateScore(){
