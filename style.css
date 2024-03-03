@@ -39,7 +39,7 @@ body,
     box-shadow: inset 0 0 0 5px #8b966c;
 }
 
-#instruction-text{
+#start-instruction-text{
     position: absolute;
     top: 60%;
     color: #333;
@@ -87,4 +87,26 @@ body,
 
 #logo{
     position: absolute;
+}
+
+.instructions-text{
+    position: absolute;
+    top: 4%;
+    color: #c5c4c4;
+    width: 450px;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.botton-text{
+    position: absolute;
+    top: 95%;
+    color: #c5c4c4;
+    width: 200px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
 }
