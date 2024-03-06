@@ -20,19 +20,36 @@ function blinkInstructionText(){
     instructionText.style.visibility = (instructionText.style.visibility === 'hidden' ? 'visible' : 'hidden');
 }
 
+// Function to mute sound
+function toggleMute(){
+    const gameSound = document.getElementById('startGameSound');
+    const soundIcon = document.getElementById('soundIcon');
+    startGameSound.muted = !startGameSound.muted;
+    soundIcon.classList.toggle('muted', startGameSound.muted, gameOverSound.muted, eatSound.muted);
+}
+
 // Function to make sound when eats an apple
 function playEatSound(){
-    const eatSound = document.getElementById('eatSound').play();
+    const eatSound = document.getElementById('eatSound');
+    eatSound.play().then().catch(error => {
+        console.error('Error playing eat sound:', error);
+    })
 }
 
 // Function to make sound when game over
 function playgameOverSound(){
-    const gameOverSound = document.getElementById('gameOverSound').play();
+    const gameOverSound = document.getElementById('gameOverSound');
+    gameOverSound.play().then().catch(error => {
+        console.error('Error playing game over sound:', error);
+    })
 }
 
 // Function to make sound when press spacebar to star
 function playstartGameSound(){
-    const startGameSound = document.getElementById('startGameSound').play();
+    const startGameSound = document.getElementById('startGameSound');
+    startGameSound.play().then().catch(error => {
+        console.error('Error playing start game sound:', error);
+    })
 }
 
 // text blink every 500 milliseconds

@@ -97,6 +97,7 @@ body,
     text-align: center;
     padding: 30px;
     margin: 0;
+    font-size: 20px;
 }
 
 .botton-text{
@@ -109,4 +110,27 @@ body,
     font-size: 12px;
     padding: 0;
     margin: 0;
+}
+
+#muteButton{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #abb78a;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+#soundIcon{
+    width: 30px;
+    height: 30px;
+}
+
+#soundIcon.muted{
+    /* Indicate when audio is muted */
+    filter: grayscale(1);
 }
