@@ -22,11 +22,28 @@ function blinkInstructionText(){
 
 // Function to mute sound
 function toggleMute(){
-    const gameSound = document.getElementById('startGameSound');
+    const startGameSound = document.getElementById('startGameSound');
+    const gameOverSound = document.getElementById('gameOverSound');
+    const eatSound = document.getElementById('eatSound');
     const soundIcon = document.getElementById('soundIcon');
+
     startGameSound.muted = !startGameSound.muted;
-    soundIcon.classList.toggle('muted', startGameSound.muted, gameOverSound.muted, eatSound.muted);
+    gameOverSound.muted = !gameOverSound.muted;
+    eatSound.muted = !eatSound.muted;
+
+    soundIcon.classList.toggle('muted', startGameSound.muted || gameOverSound.muted || eatSound.muted);
 }
+
+// Init audio 
+document.addEventListener('DOMContentLoaded', function(){
+    const startGameSound = document.getElementById('startGameSound');
+    const gameOverSound = document.getElementById('gameOverSound');
+    const eatSound = document.getElementById('eatSound');
+
+    startGameSound.muted = false;
+    gameOverSound.muted = false;
+    eatSound.muted = false;
+})
 
 // Function to make sound when eats an apple
 function playEatSound(){

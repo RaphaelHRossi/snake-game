@@ -116,8 +116,6 @@ body,
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
     background-color: #abb78a;
     border: none;
     border-radius: 50%;
@@ -128,9 +126,13 @@ body,
 #soundIcon{
     width: 30px;
     height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
 }
 
-#soundIcon.muted{
+#soundIcon.muted {
     /* Indicate when audio is muted */
-    filter: grayscale(1);
+    background-color: gray;
 }
