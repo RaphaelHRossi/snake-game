@@ -116,6 +116,8 @@ body,
     position: fixed;
     top: 20px;
     right: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #abb78a;
     border: none;
     border-radius: 50%;
@@ -126,6 +128,10 @@ body,
 #soundIcon{
     width: 30px;
     height: 30px;
+    
+    position: fixed;
+    top: 20px;
+    right: 20px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
