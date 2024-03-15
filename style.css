@@ -89,15 +89,27 @@ body,
     position: absolute;
 }
 
-.instructions-text{
-    position: absolute;
-    top: 4%;
-    color: #c5c4c4;
+.instructions{
+    position: fixed;
+    top: -1%;
     width: 450px;
-    text-align: center;
     padding: 30px;
     margin: 0;
-    font-size: 20px;
+}
+
+.instructions img{
+    display: block;
+    margin:  auto;
+    max-width: 20%;
+    height: auto;
+}
+
+.instructions-text{
+    color: #c5c4c4;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .botton-text{

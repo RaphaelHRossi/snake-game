@@ -13,7 +13,7 @@
 <body>
     <!-- Mute Button -->
     <button id="muteButton"  onclick="toggleMute()">
-        <img id="soundIcon" class="muted" src="assets/images/Speaker_Icon.png" alt="Som Ativado">
+        <img id="soundIcon" class="" src="assets/images/Speaker_Icon.png" alt="Som Ativado">
     </button>
 
     <!-- Audio elements -->
@@ -21,9 +21,11 @@
     <audio id="gameOverSound" src="assets/audios/GameOver.wav"></audio>
     <audio id="startGameSound" src="assets/audios/start.mp3"></audio>
 
-    <div>
-        <p class="instructions-text">Use the arrow keys to move <br>&#8593 <br> &#8592 &#8595 &#8594</p>
+    <div class="instructions">
+        <p class="instructions-text">Use the arrow keys to move:</p>
+        <img src="assets/images/arrowkeys.png" alt="Arrow Keys">
     </div>
+
     <div>
         <div class="scores">
             <h1 id="score">000</h1>
